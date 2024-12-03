@@ -1,7 +1,7 @@
 type instruction = Do|Dont|Mul of int * int
-let s = "xmul(2,4)%&mul[3,7]!@^do_not_mul(5,5)+mul(32,64]then(mul(11,8)mul(8,5))"
-let s2 = "xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))"
+
 let inst_r = Str.regexp {|\(do()\|don't()\|mul(\([0-9]+\),\([0-9]+\))\)|}
+
 let rec get_all_matches s i =
   match Str.search_forward inst_r s i with
   | j  -> let instruction =
