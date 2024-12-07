@@ -37,3 +37,17 @@ let part1 map =
   match walk map with
   | Some movements -> List.map ~f:fst movements |> Set.of_list (module Tuple.Comparator (Int) (Int)) |> Set.length
   | _ -> failwith "Loop detected"
+
+let part2 map =
+  match walk map with
+  | None -> failwith "Loop detected"
+  | Some movements -> 
+     List.fold ~f:(fun acc (pos, _) ->
+         match walk {locations= pos::map.locations; n_rows = map.n_rows; n_cols = map.n_cols; start_pos = map.start_pos} with
+         | None -> (Set.add acc pos)
+         | Some _ -> acc
+       )  ~init:(Set.empty (module Tuple.Comparator (Int) (Int)))  movements
+  |> Set.length
+
+
+

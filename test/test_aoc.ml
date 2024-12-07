@@ -58,5 +58,7 @@ let () =
           [ "....#....."; ".........#"; ".........."; "..#......."; ".......#.."; ".........."; ".#..^....."; "........#."; "#........."; "......#..." ]
         in
         let map = Aoc.Day6.parse_input test_input in
-        [ ("Day6 part1", `Quick, fun () -> check int "Expected int" 41 (Aoc.Day6.part1 map)) ] );
+        [ ("Day6 part1", `Quick, fun () -> check int "Expected int" 41 (Aoc.Day6.part1 map));
+          ("Day6 part2", `Quick, fun () -> check int "Expected int" 6 (Aoc.Day6.part2 map));
+      ] );
     ]
