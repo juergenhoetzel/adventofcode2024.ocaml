@@ -53,4 +53,10 @@ let () =
         in
         let test_input = [ [ 75; 47; 61; 53; 29 ]; [ 97; 61; 53; 29; 13 ]; [ 75; 29; 13 ]; [ 75; 97; 47; 61; 53 ]; [ 61; 13; 29 ]; [ 97; 13; 75; 29; 47 ] ] in
         [ ("Day5 part 1", `Quick, fun () -> check int "Expected int" 143 (Aoc.Day5.part1 test_order test_input)) ] );
+      ( "Day6",
+        let test_input =
+          [ "....#....."; ".........#"; ".........."; "..#......."; ".......#.."; ".........."; ".#..^....."; "........#."; "#........."; "......#..." ]
+        in
+        let map = Aoc.Day6.parse_input test_input in
+        [ ("Day6 part1", `Quick, fun () -> check int "Expected int" 41 (Aoc.Day6.part1 map)) ] );
     ]

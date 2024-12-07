@@ -9,6 +9,6 @@
 | [Day 3: Mull It Over](https://adventofcode.com/2024/day/3)       | ✅     | ✅     | [day3.ml](lib/day3.ml) |
 | [Day 4: Ceres Search](https://adventofcode.com/2024/day/4)       | ✅     | ✅     | [day4.ml](lib/day4.ml) |
 | [Day 5: Print Queue](https://adventofcode.com/2024/day/5)        | ✅     | ❌     | [day5.ml](lib/day5.ml) |
-
+| [Day 6: Guard Gallivant](https://adventofcode.com/2024/day/6)    | ✅     | ❌     | [day6.ml](lib/day6.ml) |
 
 

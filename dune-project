@@ -15,5 +15,5 @@
  (name aoc)
  (synopsis "Advend of Code")
  (description "Solutions in OCaml")
- (depends ocaml dune base))
+ (depends ocaml dune base core))
 
