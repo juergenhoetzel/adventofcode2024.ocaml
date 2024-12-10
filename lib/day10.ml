@@ -39,3 +39,7 @@ let part1 m =
   let ths = get_trailheads m in
   Array.map ths ~f:(fun pos -> get_paths m pos |> List.map ~f:List.hd_exn |> Set.of_list (module Tuple.Comparator (Int) (Int)) |> Set.length)
   |> Array.reduce_exn ~f:( + )
+
+let part2 m =
+  let ths = get_trailheads m in
+  Array.map ths ~f:(fun pos -> get_paths m pos |> List.length) |> Array.reduce_exn ~f:( + )
