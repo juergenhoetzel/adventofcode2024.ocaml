@@ -22,6 +22,10 @@ let () =
           let player_map = Aoc.Day6.parse_input lines in
           Format.printf "Part1: %d\n" (Aoc.Day6.part1 player_map);
           Format.printf "Part2: %d\n" (Aoc.Day6.part2 player_map)
+      | Some 10 ->
+          let lines = In_channel.with_open_text file_name In_channel.input_lines in
+          let m = Aoc.Day10.parse_input lines in
+          Format.printf "Part1: %d\n" (Aoc.Day10.part1 m)
       | Some _ -> Format.printf "Unknown Day: %s\n" day_s
       | None -> Format.printf "Invalid day syntax: %s\n" day_s)
   | _ -> Format.printf "Usage: %s day input_file\n" Sys.argv.(0)

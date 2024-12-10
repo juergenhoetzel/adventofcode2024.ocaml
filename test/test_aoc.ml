@@ -58,7 +58,12 @@ let () =
           [ "....#....."; ".........#"; ".........."; "..#......."; ".......#.."; ".........."; ".#..^....."; "........#."; "#........."; "......#..." ]
         in
         let map = Aoc.Day6.parse_input test_input in
-        [ ("Day6 part1", `Quick, fun () -> check int "Expected int" 41 (Aoc.Day6.part1 map));
+        [
+          ("Day6 part1", `Quick, fun () -> check int "Expected int" 41 (Aoc.Day6.part1 map));
           ("Day6 part2", `Quick, fun () -> check int "Expected int" 6 (Aoc.Day6.part2 map));
-      ] );
+        ] );
+      ( "Day10",
+        let test_input = [ "89010123"; "78121874"; "87430965"; "96549874"; "45678903"; "32019012"; "01329801"; "10456732" ] in
+        let m = Aoc.Day10.parse_input test_input in
+        [ ("Day10 part1", `Quick, fun () -> check int "Expected int" 36 (Aoc.Day10.part1 m)) ] );
     ]
