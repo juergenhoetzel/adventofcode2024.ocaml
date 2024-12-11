@@ -69,4 +69,7 @@ let () =
           ("Day10 part1", `Quick, fun () -> check int "Expected int" 36 (Aoc.Day10.part1 m));
           ("Day10 part2", `Quick, fun () -> check int "Expected int" 81 (Aoc.Day10.part2 m));
         ] );
+      ( "Day11",
+        let test_input = [ 125; 17 ] in
+        [ ("Day11 part1", `Quick, fun () -> check int "Expected int" 55312 (Aoc.Day11.part1 test_input)) ] );
     ]

@@ -27,6 +27,13 @@ let () =
           let m = Aoc.Day10.parse_input lines in
           Format.printf "Part1: %d\n" (Aoc.Day10.part1 m);
           Format.printf "Part2: %d\n" (Aoc.Day10.part2 m)
+      | Some 11 -> (
+          match In_channel.with_open_text file_name In_channel.input_line with
+          | Some line ->
+              let xs = Aoc.Day11.parse_line line in
+              Format.printf "Part1: %d\n" (Aoc.Day11.part1 xs);
+              Format.printf "Part2: %d\n" (Aoc.Day11.part2 xs)
+          | _ -> failwith "Missing input")
       | Some _ -> Format.printf "Unknown Day: %s\n" day_s
       | None -> Format.printf "Invalid day syntax: %s\n" day_s)
   | _ -> Format.printf "Usage: %s day input_file\n" Sys.argv.(0)
