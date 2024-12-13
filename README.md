@@ -15,3 +15,4 @@
 | [Day 9: Disk Fragmenter](https://adventofcode.com/2024/day/9)       | ❌     | ❌     |                          |
 | [Day 10: Hoof It](https://adventofcode.com/2024/day/10)             | ✅     | ✅     | [day10.ml](lib/day10.ml) |
 | [Day 11: Plutonian Pebbles](https://adventofcode.com/2024/day/11)   | ✅     | ✅     | [day11.ml](lib/day11.ml) |
+| [Day 13: Claw Contraption](https://adventofcode.com/2024/day/13)    | ✅     | ✅     | [day13.ml](lib/day13.ml) |

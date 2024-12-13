@@ -34,6 +34,13 @@ let () =
               Format.printf "Part1: %d\n" (Aoc.Day11.part1 xs);
               Format.printf "Part2: %d\n" (Aoc.Day11.part2 xs)
           | _ -> failwith "Missing input")
+      | Some 13 ->
+          let s = In_channel.with_open_text file_name In_channel.input_all in
+          let machines = Aoc.Day13.parse_machines s in
+          let score1 = Aoc.Day13.buttons_score machines in
+          let score2 = List.map Aoc.Day13.tweak machines |> Aoc.Day13.buttons_score in
+          Format.printf "Part1: %d\n" score1;
+          Format.printf "Part2: %d\n" score2
       | Some _ -> Format.printf "Unknown Day: %s\n" day_s
       | None -> Format.printf "Invalid day syntax: %s\n" day_s)
   | _ -> Format.printf "Usage: %s day input_file\n" Sys.argv.(0)
