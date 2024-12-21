@@ -11,8 +11,7 @@ let combinations prefixes design =
     | Some i -> i
     | None ->
         let result =
-          List.map prefixes ~f:(fun prefix -> match String.chop_prefix_exn s ~prefix with exception Invalid_argument _ -> 0 | ss -> loop cache ss)
-          |> List.fold ~init:0 ~f:( + )
+          List.map prefixes ~f:(fun prefix -> match String.chop_prefix s ~prefix with None -> 0 | Some ss -> loop cache ss) |> List.fold ~init:0 ~f:( + )
         in
         cache := Map.add_exn !cache ~key:s ~data:result;
         result
