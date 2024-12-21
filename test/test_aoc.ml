@@ -88,4 +88,11 @@ let () =
            Prize: X=18641, Y=10279"
         in
         [ ("Day13", `Quick, fun () -> check int "Expected int" 480 (Aoc.Day13.parse_machines test_input |> Aoc.Day13.buttons_score)) ] );
+      ( "Day19",
+        let test_input = "r, wr, b, g, bwu, rb, gb, br\n\nbrwrr\nbggr\ngbbr\nrrbgbr\nubwu\nbwurrg\nbrgr\nbbrgwb" in
+        let prefixes, designs = Aoc.Day19.parse_input test_input in
+        [
+          ("Day19 part1", `Quick, fun () -> check int "Expected int" 6 (Aoc.Day19.part1 prefixes designs));
+          ("Day19 part2", `Quick, fun () -> check int "Expected int" 16 (Aoc.Day19.part2 prefixes designs));
+        ] );
     ]
